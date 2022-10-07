@@ -1,0 +1,15 @@
+@media screen and (max-width: 1300px) {
+  .header {
+    padding-top: 20px;
+  }
+  .header__info {
+    margin-right: 70px;
+  }
+  .header__bottom {
+    display: none;
+  }
+
+  .menu__btn {
+    display: block;
+  }
+}

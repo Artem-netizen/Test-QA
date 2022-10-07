@@ -1,0 +1,20 @@
+include blocks/blocks
+
+doctype html
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv="X-UA-Compatible" content="ie=edge")
+        meta(name="format-detection" content="telephone=no")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        include _head
+        title Test
+    body
+        .wrapper
+            .content__body
+                +header
+                main.main
+                    include content/_content
+
+            +footer
+        include _scripts

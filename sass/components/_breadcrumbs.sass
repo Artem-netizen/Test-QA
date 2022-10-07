@@ -1,0 +1,19 @@
+.breadcrumbs
+    @include flex(inline-flex, start, center, nowrap)
+    &__item
+        margin-right: 15px
+        position: relative
+        &::before
+            content: '/'
+            position: absolute
+            top: 0
+            right: -10px
+            color: $grey-color
+        &:last-child
+            margin-right: 0
+            &::before
+                display: none
+    &__link
+        display: inline-block
+        @include font(16px, 400, 135%)
+        color: $grey-color

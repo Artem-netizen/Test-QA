@@ -1,0 +1,136 @@
+section.all-news
+    .container
+        .content__top
+            h2.title Все новости
+            ul.breadcrumbs
+                li.breadcrumbs__item
+                    a.breadcrumbs__link(href='#') Главная
+                li.breadcrumbs__item
+                    p.breadcrumbs__link Новости
+
+        .all-news__content
+            .filters
+                .dropdown.clr
+                    button.dropdown__btn.icon.clr__btn(type='button') 02/02/2021
+                    include _calendar
+                .dropdown.select
+                    button.dropdown__btn.select__btn(type='button') Выбрать рубрику
+                    .dropdown__inner
+                        ul.dropdown__list
+                            li.dropdown__item.disabled
+                                | Медицина
+                            li.dropdown__item
+                                | Общество
+                            li.dropdown__item
+                                | Коммуналка
+                            li.dropdown__item
+                                | Политика
+                            li.dropdown__item
+                                | Спорт
+                            li.dropdown__item
+                                | Вектор развития
+                            li.dropdown__item
+                                | Коммуналка
+                            li.dropdown__item
+                                | Политика
+                            li.dropdown__item
+                                | Спорт
+            ul.all-news-grid.grid
+                li.grid__item
+                    article.card
+                        .card__img
+                            img(src='../img/articles/fridge.jpg', alt='изображение')
+                        .card__inner
+                            .card__content
+                                .card__content-heading
+                                    ul.rubrics
+                                        li.rubrics__item
+                                            h2 Медицина
+                                        li.rubrics__item
+                                            h2 Общество
+                                    time.date(datetime='2021-02-02') 02/02/2021
+                                p.card__text Благодаря поддержке предпринимателей. Златоустовские поликлиники оснастили холодильными установками для хранения вакцины
+                            button.card__btn(type='button')
+                                img(src='../img/icons/incline-arrow.svg', alt='перейти')
+                        a.card__link(href='#')
+                li.grid__item
+                    article.card
+                        .card__img
+                            img(src='../img/articles/base.jpg', alt='изображение')
+                        .card__inner
+                            .card__content
+                                .card__content-heading
+                                    ul.rubrics
+                                        li.rubrics__item
+                                            h2 Медицина
+                                    time.date(datetime='2021-01-29') 29/01/2021
+                                p.card__text Госпитальная база закрыта, учреждение вернётся в «доковидный» режим после дезинфекции.  Роддом Златоуста вновь откроет свои двери 8 февраля
+                            button.card__btn(type='button')
+                                img(src='../img/icons/incline-arrow.svg', alt='перейти')
+                        a.card__link(href='#')
+                li.grid__item
+                    article.card
+                        .card__img
+                            img(src='../img/articles/thaw.jpg', alt='изображение')
+                        .card__inner
+                            .card__content
+                                .card__content-heading
+                                    ul.rubrics
+                                        li.rubrics__item
+                                            h2 Медицина
+                                        li.rubrics__item
+                                            h2 Общество
+                                    time.date(datetime='2021-02-02') 02/02/2021
+                                p.card__text Осторожно, сосульки! Оттепель на этой неделе привела к тому, что на крышах многих домов образовались опасные ледяные наросты
+                            button.card__btn(type='button')
+                                img(src='../img/icons/incline-arrow.svg', alt='перейти')
+                        a.card__link(href='#')
+                li.grid__item
+                    article.card
+                        .card__img
+                            img(src='../img/articles/meeting.jpg', alt='изображение')
+                        .card__inner
+                            .card__content
+                                .card__content-heading
+                                    ul.rubrics
+                                        li.rubrics__item
+                                            h2 Политика
+                                    time.date(datetime='2021-01-29') 29/01/2021
+                                p.card__text В четыре раза меньше вопросов, чем обычно. В Златоусте прошло первое в 2021-м году Собрание депутатов
+                            button.card__btn(type='button')
+                                img(src='../img/icons/incline-arrow.svg', alt='перейти')
+                        a.card__link(href='#')
+                li.grid__item
+                    article.card
+                        .card__img
+                            img(src='../img/articles/trash.jpg', alt='изображение')
+                        .card__inner
+                            .card__content
+                                .card__content-heading
+                                    ul.rubrics
+                                        li.rubrics__item
+                                            h2 Коммуналка
+                                    time.date(datetime='2021-01-29') 29/01/2021
+                                p.card__text В Златоусте сотрудники теротдела проверят магазин, из которого выбрасывали строительный мусор на контейнерную площадку
+                            button.card__btn(type='button')
+                                img(src='../img/icons/incline-arrow.svg', alt='перейти')
+                        a.card__link(href='#')
+                li.grid__item
+                    article.card
+                        .card__img
+                            img(src='../img/articles/meeting-2.jpg', alt='изображение')
+                        .card__inner
+                            .card__content
+                                .card__content-heading
+                                    ul.rubrics
+                                        li.rubrics__item
+                                            h2 Общество
+                                    time.date(datetime='2021-02-02') 29/01/2021
+                                p.card__text ДЧ: Первое Собрание депутатов 2021 года: планируется работа на весь год
+                            button.card__btn(type='button')
+                                img(src='../img/icons/incline-arrow.svg', alt='перейти')
+                        a.card__link(href='#')
+            include slider/_slider
+            include _pagination
+
+

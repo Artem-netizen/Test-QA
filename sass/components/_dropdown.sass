@@ -1,0 +1,101 @@
+.dropdown
+    margin-right: 35px
+    position: relative
+    flex: 1 0 250px
+    max-width: 468px
+    width: 100%
+    &:last-child
+        margin-right: 0
+    @media screen and (max-width: 570px)
+        margin-right: 0
+        max-width: none
+
+    &__btn
+        width: 100%
+        position: relative
+        text-align: left
+        padding: 18px 24px
+        border: 2px solid $dark-color
+        &.icon
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: 20px
+                width: 20px
+                height: 20px
+                background-size: contain
+                background-repeat: no-repeat
+                transform: translateY(-50%)
+                background-image: url('/img/icons/calendar.svg')
+
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            right: 26px
+            width: 9px
+            height: 6px
+            transition: .3s
+            transform: translateY(-50%)
+            background-size: contain
+            background-repeat: no-repeat
+            background-image: url('/img/icons/arrow-down.svg')
+
+        &.open
+            &::after
+                transform: translateY(-50%) rotate(180deg)
+
+        &:disabled
+            color: $grey-color
+            cursor: not-allowed
+            border: 2px solid $grey-color
+
+    &__input
+        padding-left: 65px
+        display: none
+
+    &__inner
+        position: absolute
+        left: 0
+        right: 0
+        top: 58px
+        z-index: 1
+        opacity: 0
+        transition: .2s
+        pointer-events: none
+        background: $white-color
+        transform: translateY(20px)
+        border: 2px solid $dark-color
+        &.open
+            opacity: 1
+            pointer-events: all
+            transform: translateY(0px)
+
+    &__list
+        margin: 4px 6px 4px 0
+        padding: 16px 18px 16px 24px
+        max-height: 250px
+        height: 100%
+        overflow-y: auto
+        &::-webkit-scrollbar
+            width: 5px
+        &::-webkit-scrollbar-thumb
+            background: $dark-color
+
+    &__item
+        margin-bottom: 16px
+        color: $dark-color
+        cursor: pointer
+        transition: .3s
+        @include font(16px, 600, 135%)
+
+        &:hover
+            color: $color-burgundy
+
+        &:last-child
+            margin-bottom: 0
+
+        &.disabled
+            color: $grey-color
+            cursor: not-allowed

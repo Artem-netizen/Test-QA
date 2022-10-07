@@ -1,0 +1,79 @@
+.calendar
+    position: absolute
+    top: 58px
+    left: 0
+    right: 0
+    z-index: 1
+    opacity: 0
+    transition: .2s
+    pointer-events: none
+    background: $white-color
+    transform: translateY(20px)
+    &.open
+        opacity: 1
+        pointer-events: all
+        transform: translateY(0px)
+    &-wrapper
+        padding: 20px
+        border: 2px solid $dark-color
+
+    &__head
+        margin-bottom: 16px
+        gap: 20px
+        @include flex(flex, space-between, center, nowrap)
+
+
+.prev,
+.next
+    font-size: 0
+
+.current-date
+    color: $dark-color
+    @include font(14px, 700, 20px)
+
+.weeks
+    margin-bottom: 8px
+    padding-bottom: 4px
+    border-bottom: 2px solid $dark-color
+    @include flex(flex, center, center, nowrap)
+    li
+        margin-right: 16px
+        flex-grow: 1
+        text-align: center
+        color: $dark-color
+        @include font(12px, 600, 16px)
+        &:last-child
+            margin-right: 0
+
+.days
+    row-gap: 17px
+    text-align: center
+    @include flex(flex, start, center, wrap)
+
+    li
+        position: relative
+        width: calc(100% / 7)
+        cursor: pointer
+        color: $dark-color
+        @include font(12px, 400, 16px)
+        @include flex(flex, center, center, nowrap)
+
+        &.inactive
+            color: $grey-color
+
+        &.active
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: 50%
+                z-index: -1
+                width: 24px
+                height: 24px
+                border-radius: 50%
+                background: $white-color
+                border: 1px solid $dark-color
+                transform: translate(-50%, -50%)
+
+.clr__btn
+    padding-left: 65px
